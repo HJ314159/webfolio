@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Source+Code+Pro:wght@300;400;600&display=swap');
+
+body{
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #1A1A1A;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+header .text{
+    display: flex;
+    flex-direction: column;
+}
+
+header h1{
+    margin-top: 39vh;
+    margin-left: 28vw;
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.highlight{
+    height: 60px;
+    width: 370px;
+    margin-left: 28vw;
+    background-color: #1E6D91;
+    opacity: 47%;
+    position: absolute;
+    bottom: 39vh;
+    transition: height 0.5s;
+}
+
+nav{
+    font-size: 2rem;
+    display:flex;
+    flex-direction: column;
+    gap: 2.3em;
+    margin-top: 28vh;
+    margin-left: 140px;
+}
+
+#to-do-list:hover {
+    text-decoration: underline;
+    color: #60C9E1;
+    cursor: grab;
+}
+
+#weather-app:hover {
+    text-decoration: underline;
+    color: #60C9E1;
+    cursor: grab;
+}
+
+#image-gallery:hover {
+    text-decoration: underline;
+    color: #60C9E1;
+    cursor: grab;
+}
+
+#recipe-finder:hover {
+    text-decoration: underline;
+    color: #60C9E1;
+    cursor: grab;
+}
+
+
+
+
