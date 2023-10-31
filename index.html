@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Webfolio</title>
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div class="text">
+            <section class="text">
                 <h1>Heijin's <br> Webfolio</h1>
-                <div class="highlight"></div>
-            </div>
+                <div id="highlight"></div>
+            </section>
             
             <nav>
                 <a nav="projects.html#to-do-list" id = "to-do-list">TO-DO LIST</a>
@@ -22,8 +23,42 @@
             </nav>
         </header>
 
-        
+        <div class="about-me">
+            <section class="intro">
+                <h1>About Me</h1>
+                <h2>Hey there! I'm Heijin, an aspiring programmer on a 
+                    journey to turn lines of code into innovative solutions. Here's a bit about me:</h2>
+            </section>
+            <div class="box">
+                <section class="background-info hidden info">
+                    <h3>
+                        🎓 I'm currently a high school student gearing up for my GCSEs, with a strong passion for coding.
+                    </h3>
+                    <h3>
+                        💻 Programming has always fascinated me. 
+                        Whether it's crafting Python scripts to automate daily tasks or designing web applications, 
+                        I find joy in the creative process of coding.
+                    </h3>
+                    <h3>
+                    🚀 My journey began with my love for problem-solving and a curiosity to understand how things work. 
+                    I've already dived into projects like a recipe finder and this portfolio website, 
+                    each teaching me valuable lessons and pushing me to improve. 
+                    </h3>
+                </section>
+                <section class="future-goals hidden info">
+                    <h3>
+                        🌟My main goal is to become a well-rounded full-stack developer, mastering both front-end and back-end technologies. 
+                        I believe this will enable me to create seamless and user-friendly web applications. </h3>
+                    <h3>
+                        I'm also quite interested in artificial intelligence and machine learning. 
+                        I hope to continuously expand my skill set and adapt to the ever-evolving programming landscape, embracing new challenges.
+                    </h3>
+                </section>
+            </div>
+            <div class="ending">
+                <h3>In my free time, you can find me watching anime. Thanks for stopping by, and I look forward to connecting with you!</h3>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

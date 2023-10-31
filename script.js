@@ -2,10 +2,24 @@ const highlight = document.getElementById('highlight');
 
 window.onscroll = function() {
     const scrollY = window.scrollY;
-    const maxHeight = 100; 
-    const minHeight = 50;  
+    const initialHeight = 200; 
+    const minHeight = 45; 
 
-    const newHeight = maxHeight - (scrollY * (maxHeight - minHeight) / document.body.scrollHeight);
-    
-    scrollingElement.style.height = newHeight + 'vh';
+    const newHeight = initialHeight - (scrollY * (initialHeight - minHeight) / 50);
+
+    highlight.style.height = newHeight + 'px';
 };
+
+const observer = new IntersectionObserver ((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
+        } else{
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
