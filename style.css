@@ -28,7 +28,6 @@ header{
 }
 header .text{
     display: grid;
-    /* grid-template-rows: auto; */
 }
 
 .text > * { 
@@ -36,19 +35,14 @@ header .text{
 }
 
 .text h1{
-    /* margin-top: 39vh;
-    margin-left: 28vw; */
     font-size: 5rem;
     font-weight: 400;
 }
 .text #highlight{
     height: 13rem;
     width: 22rem;
-    /* margin-left: 20vw; */
     background-color: #1E6D91;
     opacity: 47%;
-    /* position: absolute;
-    bottom: 42vh; */
     transition: height 0.5s;
     align-self: end;
 }
@@ -58,8 +52,6 @@ nav{
     display:flex;
     flex-direction: column;
     gap: 2.3em;
-    /* margin-top: 28vh;
-    margin-left: 140px; */
 }
 #to-do-list:hover {
     text-decoration: underline;
