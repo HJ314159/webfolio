@@ -1,41 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Source+Code+Pro:wght@300;400;600&display=swap');
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
 body{
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     background-color: #1A1A1A;
     color: white;
     font-family: "Montserrat", monospace;
 }
-
 header{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     width: 100vw;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 }
-
 header .text{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    /* grid-template-rows: auto; */
 }
 
-header h1{
-    margin-top: 39vh;
-    margin-left: 28vw;
+.text > * { 
+    grid-area: 1/12;
+}
+
+.text h1{
+    /* margin-top: 39vh;
+    margin-left: 28vw; */
     font-size: 5rem;
     font-weight: 400;
 }
-
-#highlight{
-    height: 180px;
-    width: 370px;
-    margin-left: 27.5vw;
+.text #highlight{
+    height: 13rem;
+    width: 22rem;
+    /* margin-left: 20vw; */
     background-color: #1E6D91;
     opacity: 47%;
-    position: absolute;
-    bottom: 42vh;
+    /* position: absolute;
+    bottom: 42vh; */
     transition: height 0.5s;
+    align-self: end;
 }
 
 nav{
@@ -43,32 +58,28 @@ nav{
     display:flex;
     flex-direction: column;
     gap: 2.3em;
-    margin-top: 28vh;
-    margin-left: 140px;
+    /* margin-top: 28vh;
+    margin-left: 140px; */
 }
-
 #to-do-list:hover {
     text-decoration: underline;
     color: #1E6D91;
-    cursor: grab;
+    cursor: hand;
 }
-
 #weather-app:hover {
     text-decoration: underline;
     color: #1E6D91;
-    cursor: grab;
+    cursor: hand;
 }
 
-#image-gallery:hover {
-    text-decoration: underline;
-    color: #1E6D91;
-    cursor: grab;
+#home{
+    font-size: 1.5rem;
 }
 
-#recipe-finder:hover {
+#home:hover{
     text-decoration: underline;
     color: #1E6D91;
-    cursor: grab;
+    cursor: hand;
 }
 
 .about-me {
@@ -77,31 +88,27 @@ nav{
     padding-top: 200px;
     font-weight: 300;
 }
-
 .about-me .intro {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0 25px;
 }
 
 .about-me h1 {
     font-size: 3.5rem;
     font-weight: 400;
 }
-
 .about-me h2 {
     font-weight: 300;
 }
-
 .about-me h3{
     font-weight: 300;
 }
-
 .about-me .box{
     display: flex;
     font-weight: 300;
 }
-
 .about-me .background-info{
     margin-top: 10px;
     margin-left: 340px;
@@ -111,7 +118,6 @@ nav{
     width: 1440px;
     border-radius: 30px;
 }
-
 .about-me .future-goals{
     margin-top: 10px;
     margin-right: 340px;
@@ -120,10 +126,12 @@ nav{
     width: 1440px;
     border-radius: 30px;
 }
-
 .about-me .ending{
-    margin-top: 40px;
-    margin-left: 405px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 40px;
+    margin-left: 405px; */
     font-weight: 300;
 }
 
@@ -131,21 +139,128 @@ nav{
     opacity: 0;
     transition: all 1s;
 }
-
 @media(prefers-reduced-motion){
     .hidden{
         transition: none;
     }
 }
-
 .show{
     opacity: 1;
 }
-
 .info:nth-child(2){
     transition-delay: 200ms;
 }
-
 .info:nth-child(3){
     transition-delay: 800ms;
+}
+
+@media(max-width: 1400px){
+    header{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .text{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin: 25px;
+    }
+
+    .about-me .background-info{
+        padding: 25px;
+        width: auto;
+    }
+    .about-me .future-goals{
+        background-color: #245F7A;
+        padding: 40px 25px;
+        width: 1440px;
+        border-radius: 30px;
+    }
+    .about-me .ending{
+        margin-top: 40px;
+        margin-left: 405px;
+        font-weight: 300;
+    }
+}
+
+/* projects.html */
+
+#to-do-list-project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em auto;
+    margin-bottom: 5em;
+}
+
+#to-do-list-project h1{
+    font-size: 3rem;
+}
+
+.projects-text{
+    display: flex;
+    gap: 1em;
+}
+
+.card{
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    height: auto;
+    width: 19vw;
+    background-color: #245F7A;
+    white-space: normal;
+    transition: width 0.5s ease; 
+    padding: 25px;
+}
+
+.card h3{
+    height:1em;
+    width: 10em;
+    word-wrap: break-word;
+    justify-content: center;
+    transform-origin: top left;
+}
+
+.projects-text .card:hover {
+    width: 30vw;
+    flex-wrap: wrap;
+}
+
+
+#tic-tac-toe-project {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5em;
+    background-color: white;
+}
+
+#tic-tac-toe-project h1 {
+    font-size: 3rem;
+    color: black;
+}
+
+#tic-tac-toe-project h2 {
+    font-size: 1.4rem;
+    color: black;
+}
+
+@media(max-width: 1400px){
+    .card{
+        max-width: 25vw;
+        height: auto;
+    }
 }
