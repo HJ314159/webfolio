@@ -208,7 +208,7 @@ nav{
     display: flex;
     align-items: flex-start;
     gap: 2em;
-    height: auto;
+    height: 70vh;
     width: 19vw;
     background-color: #245F7A;
     white-space: normal;
@@ -252,7 +252,38 @@ nav{
 
 @media(max-width: 1400px){
     .card{
-        max-width: 25vw;
-        height: auto;
+        max-width: 20vw;
+        height: 100vh;
+    }
+}
+
+@media(max-width: 800px){
+    .projects-text{
+        flex-direction: column;
+    }
+
+    .card{
+        align-items: center;
+        height: 70vh;
+        width: 60vw;
+        white-space: normal;
+        transition: none; 
+        padding: 25px;
+    }
+    
+    .card h3{
+        height:1em;
+        width: 10em;
+        word-wrap: break-word;
+    }
+    
+    .projects-text .card:hover {
+        width: 60vw;
+    }
+    
+    
+    #tic-tac-toe-project {
+        margin: 0;
+        padding-bottom: 5em;
     }
 }
