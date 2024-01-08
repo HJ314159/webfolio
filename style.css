@@ -186,7 +186,7 @@ nav{
 
 /* projects.html */
 
-#to-do-list-project{
+.to-do-list-project{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,7 +195,7 @@ nav{
     margin-bottom: 5em;
 }
 
-#to-do-list-project h1{
+.to-do-list-project h1{
     font-size: 3rem;
 }
 
@@ -231,21 +231,31 @@ nav{
 
 
 #tic-tac-toe-project {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 2em auto;
+    margin-bottom: 5em;
+}
+
+#sudoku-generator-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0;
     padding-bottom: 5em;
     background-color: white;
 }
 
-#tic-tac-toe-project h1 {
+
+#sudoku-generator-project h1 {
     font-size: 3rem;
     color: black;
 }
 
-#tic-tac-toe-project h2 {
+#sudoku-generator-project h2 {
     font-size: 1.4rem;
     color: black;
 }
@@ -253,7 +263,7 @@ nav{
 @media(max-width: 1400px){
     .card{
         max-width: 20vw;
-        height: 100vh;
+        height: 70vh;
     }
 }
 
